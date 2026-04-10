@@ -156,3 +156,11 @@ VITE_API_BASE_URL=http://localhost:5000/api
 - `%` is inserted as `/100` from the calculator UI.
 - `EXP` is converted into `*10^` style scientific notation before evaluation.
 - `Ans` is passed back to the backend as the previous result.
+
+## Here are the web application images:
+
+![Create Account Page](create.png)
+
+![Sign In Page](signin.png)
+
+![Calculator Interface](calc.png)
