@@ -64,7 +64,7 @@ scicalc-app/
 
 ## Docker Setup:
 
-### 1. Create the root environment file
+### 1. Create the root environment file:
 
 ```bash
 cp .env.example .env
