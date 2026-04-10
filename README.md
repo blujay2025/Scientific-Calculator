@@ -72,7 +72,7 @@ cp .env.example .env
 
 Update the values in `.env` before starting the containers.
 
-### 2. Build and start the app:
+### 2. Build and start the app using the Docker Compose file in the root directory:
 
 ```bash
 docker compose up --build
