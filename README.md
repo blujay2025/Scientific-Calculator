@@ -2,7 +2,7 @@
 
 A full-stack scientific calculator with authentication and per-user calculation history.
 
-## Stack
+## Stack:
 
 - **Frontend:** React + Vite
 - **Backend:** Flask + Flask-JWT-Extended + Flask-SQLAlchemy
@@ -10,7 +10,7 @@ A full-stack scientific calculator with authentication and per-user calculation 
 - **Containerization:** Docker + Docker Compose
 - **Math engine:** SymPy
 
-## Features
+## Features:
 
 - Scientific calculator interface with backend-driven evaluation
 - Degree / radian mode toggle
@@ -28,7 +28,7 @@ A full-stack scientific calculator with authentication and per-user calculation 
 - Dockerized frontend, backend, and database services
 - Runtime frontend API configuration through `env-config.js`
 
-## Project structure
+## Project Structure:
 
 ```text
 scicalc-app/
@@ -62,7 +62,7 @@ scicalc-app/
   README.md
 ```
 
-## Docker setup
+## Docker Setup:
 
 ### 1. Create the root environment file
 
@@ -72,7 +72,7 @@ cp .env.example .env
 
 Update the values in `.env` before starting the containers.
 
-### 2. Build and start the app
+### 2. Build and start the app:
 
 ```bash
 docker compose up --build
@@ -84,11 +84,11 @@ This starts three containers:
 - **backend** → Flask API
 - **frontend** → production React build served by `serve`
 
-### 3. Access the app
+### 3. Access the app:
 
 - Application Link: `http://localhost:8080`
 
-### 4. Stop the app
+### 4. Stop the app:
 
 ```bash
 docker compose down
@@ -100,7 +100,7 @@ To remove the database volume too:
 docker compose down -v
 ```
 
-## Environment variables
+## Environment Variables:
 
 ## Root `.env` used by Docker Compose
 
@@ -118,7 +118,7 @@ FRONTEND_PORT=8080
 VITE_API_BASE_URL=http://localhost:5000/api
 ```
 
-### How env handling works
+### How env handling works:
 
 - The **db** service reads MySQL credentials from the root `.env`.
 - The **backend** service receives its database connection string, Flask secrets, port, and CORS origins from Docker Compose.
@@ -129,25 +129,25 @@ VITE_API_BASE_URL=http://localhost:5000/api
   2. `import.meta.env.VITE_API_BASE_URL`
   3. fallback to `/api`
 
-## API endpoints
+## API Endpoints:
 
-### Auth
+### Auth:
 
 - `POST /api/auth/register`
 - `POST /api/auth/login`
 - `GET /api/auth/me`
 
-### Calculator
+### Calculator:
 
 - `POST /api/calculator/evaluate`
 
-### History
+### History:
 
 - `GET /api/history`
 - `DELETE /api/history/<history_id>`
 - `DELETE /api/history`
 
-## Calculation behavior
+## Calculation Behavior:
 
 - Expressions are evaluated on the backend with SymPy.
 - In degree mode, trig functions accept degree input and inverse trig functions return degree output.
